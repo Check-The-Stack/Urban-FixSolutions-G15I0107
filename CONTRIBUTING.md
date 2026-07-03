@@ -69,3 +69,16 @@ Ejemplos:
 - `feature: agregar formulario de login`
 - `fix: corregir validación de email`
 - `docs: agregar wireframes de dashboard`
+
+## Responsive Design
+
+- **Mobile First:** diseñar para móvil primero, después adaptar a desktop
+- **Breakpoints de Tailwind:**
+  - `sm:` → 640px (tablets pequeñas)
+  - `md:` → 768px (tablets)
+  - `lg:` → 1024px (laptops)
+  - `xl:` → 1280px (desktops)
+- **Componentes responsive:** usar clases de Tailwind para adaptar
+- **Formularios:** inputs full width en móvil, anchos fijos en desktop
+- **Tablas:** scroll horizontal en móvil o vista de cards
+- **Navegación:** hamburger menu en móvil, menú completo en desktop
