@@ -45,7 +45,7 @@ pnpm dev
 Urban-FixSolutions-G15I0107/
 ├── frontend/          # React + Vite
 ├── backend/           # Express + Prisma
-├── docs/              # Documentación, wireframes, mockups
+├── design/            # Wireframes, mockups, prototipos (UX/UI)
 ├── tests/             # Tests manuales y reportes
 └── README.md
 ```

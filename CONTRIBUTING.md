@@ -47,7 +47,7 @@ pnpm install
 |-----|-----------|-------------|
 | Frontend | `/frontend` | Componentes, páginas, hooks, styles |
 | Backend | `/backend` | Routes, controllers, models, prisma |
-| UX/UI | `/docs` | Wireframes, mockups, prototipos |
+| UX/UI | `/design` | Wireframes, mockups, prototipos |
 | Tester | `/tests` | Reportes de bugs, casos de prueba |
 
 ## Si necesitás tocar algo de otro rol
