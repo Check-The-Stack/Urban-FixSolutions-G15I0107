@@ -258,3 +258,8 @@ hover:bg-blue-700  // al pasar el mouse
 // Transiciones
 transition-colors  // animar cambios de color
 ```
+
+## Guardado pre-commit — Tue Jul 14 03:07:26     2026
+
+
+✅ Guardado a NOTAS_LOCALES.md
