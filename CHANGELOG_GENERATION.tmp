@@ -1,4 +1,0 @@
-# Test pre-commit hook
-Archivo/s: ./test-file.txt
-Cambio: Agregar un archivo de texto de prueba para verificar el hook pre-commit
-Motivo: Probar el hook de pre-commit que guarda notas en NOTAS_LOCALES.md
