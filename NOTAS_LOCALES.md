@@ -259,6 +259,57 @@ hover:bg-blue-700  // al pasar el mouse
 transition-colors  // animar cambios de color
 ```
 
+## Servicios - backend (API JavaScript)
+
+`services/api.js` — Un cliente HTTP reutilizable que maneja toda la comunicación con el backend Express que soportan los datos de los servicios:
+
+```javascript
+const api = axios.create({
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3001/api',
+});
+```
+
+### Características principales
+
+**✅ Autoservicio de autenticación** — Siempre agrega el token JWT actual al header de cada request automáticamente (sin copiar tokens por request). Si no hay token, continúa de todos modos.
+
+**✅ Auto-manejo de errores** — Si recibes un `401` (no autorizado/expirado) del backend, automáticamente hace logout (limpia el token de `localStorage`) y redirige a `/login` para poder volver a logearte.
+
+**✅ Backend URL unificado** — Podés cambiar toda la base desde `.env`:
+
+```bash
+VITE_API_URL=http://localhost:3001/api
+```
+
+### Ejemplos de uso
+
+```javascript
+import api from './services/api';
+
+// Login - backend guarda token/user en localStorage
+const { data } = await api.post('/auth/login', { email, password });
+login(data.user, data.token);  // AuthContext guarda en localStorage
+
+// Get all services - token agregado automáticamente
+const { data: services } = await api.get('/servicios');
+
+// Crear nuevo servicio - token agregado automáticamente
+const { data: newService } = await api.post('/servicios', formData);
+
+// Editar servicio - token agregado automáticamente
+await api.put('/servicios/1', updatedData);
+
+// Eliminar servicio - token agregado automáticamente
+await api.delete('/servicios/1');
+```
+
+### Endpoints típicos del backend
+
+- `GET /servicios`           → Obtener todos los servicios
+- `POST /servicios`          → Crear nuevo servicio
+- `PUT /servicios/:id`       → Editar servicio
+- `DELETE /servicios/:id`    → Eliminar servicio
+
 ## Guardado pre-commit — Tue Jul 14 03:07:26     2026
 
 
